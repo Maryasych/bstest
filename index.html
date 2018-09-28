@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/resourses/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-sm-3 col-sm-9 col-12 center">
+                <h2>Заполните форму</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="border border-dark p-2 h-100">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam hic facilis possimus quis expedita
+                    quia unde quisquam aperiam placeat nobis nemo eligendi nostrum amet mollitia, quibusdam odit alias
+                    distinctio tempora.</div>
+            </div>
+            <div class="col-sm-9">
+                <div class="heading-1">
+                    <span><i>Общая информация</i></span>
+                </div>
+                <form id="card" action='javascript:void(0);$("#showModal").modal()' onsubmit="renderModal(this)">
+                    <div class="form-row">
+                        <div class="col-sm-4 mb-2">
+                            <label for="surName">Фамилия</label>
+                            <input type="text" class="form-control" id="surName" name="personalData" autocomplete="username" required>
+                        </div>
+                        <div class="col-sm-4 mb-2">
+                            <label for="name">Имя</label>
+                            <input type="text" class="form-control" id="name" name="personalData" autocomplete="name" required>
+                        </div>
+                        <div class="col-sm-4 mb-2">
+                            <label for="secName">Отчество</label>
+                            <input type="text" class="form-control" id="secName" name="personalData" autocomplete="family-name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="text-center col-sm-2 mb-2">
+                            <div class="text-center btn-sm btn-success mb-2">Меняли фамилию?</div>
+                            <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                                <label class="btn btn-outline-success border-0 active">
+                                    <input type="radio" name="changeSurname" value="Да" autocomplete="off"> Да
+                                </label>
+                                <label class="btn btn-outline-success border-0">
+                                    <input type="radio" name="changeSurname" value="Нет" autocomplete="off" checked>
+                                    Нет
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-center offset-sm-2 col-sm-2 mb-2">
+                            <div class="text-center btn-sm btn-success mb-2">Пол</div>
+                            <div class="btn-group btn-group-toggle 2" data-toggle="buttons">
+                                <label class="btn btn-outline-success border-0 active">
+                                    <input type="radio" name="sex" value="Мужcкой" autocomplete="off" checked> Муж
+                                </label>
+                                <label class="btn btn-outline-success border-0">
+                                    <input type="radio" name="sex" value="Женский" autocomplete="off"> Жен
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-center offset-sm-2 col-sm-2 mb-2">
+                            <div class="text-center btn-sm btn-success mb-2">Семейный статус</div>
+                            <div class="input-group">
+                                <select class="custom-select" name="maritalStatus">
+                                    <option value="Женат/Замужем">Женат/Замужем</option>
+                                    <option value="Разведен/Разведена">Разведен/Разведена</option>
+                                    <option value="Интроверт">Интроверт</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress position-relative mb-2" style="height: 20px;">
+                        <div class="cover position-absolute"></div>
+                        <div class="custom-progress" role="progressbar" style="width: 100%"></div>
+                    </div>
+                    <div class=" d-flex flex-wrap no-gutters justify-content-around mb-2">
+                        <div class="input-group col-sm-5 mb-2">
+                            <input type="number" class="form-control" min='0' max="100" aria-label="number"
+                                aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary paintPogress" type="button">Кнопка</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 h-2 mb-2 progress border">
+                            <div class="progress-bar bg-success" role="progressbar2" style="width: 0%" aria-valuenow="0"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="offset-sm-3 col-sm-9 col-12 center">
+                <button type="submit" form="card" class="handMade">
+                    Запустить модальное окно
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Ваше резюме</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                <button type="button" class="btn btn-primary">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./resourses/meters.js"></script>
+    <script src="./resourses/result-in-modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

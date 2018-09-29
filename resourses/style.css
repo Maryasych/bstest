@@ -34,6 +34,13 @@
   .h-2 {
     height: calc(2.25rem + 2px);
   }
+  .btn-custom{
+    color: #000;
+  }
+  .btn-custom:hover{
+    background: #28a745;
+    color: #fff
+  }
   .custom-progress {
     background: -webkit-linear-gradient(left, #ffffff 1%, #52b152 50%, #008714 100%);
     background: -moz-linear-gradient(left, #ffffff 1%, #52b152 50%, #008714 100%);
@@ -58,8 +65,3 @@
     background: transparent;
     color: blue;
   }
-  
-  input[type='radio']:checked {
-    background: red;
-  }
-  

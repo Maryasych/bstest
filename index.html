@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./resourses/favicon-96x96.png">
     <link rel=" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="./resourses/style.css">
+    <link rel="stylesheet" href="./resourses/style.css">
 </head>
 
 <body>
@@ -34,43 +34,46 @@
                     <div class="form-row">
                         <div class="col-sm-4 mb-2">
                             <label for="surName">Фамилия</label>
-                            <input type="text" class="form-control" id="surName" name="personalData" autocomplete="username" required>
+                            <input type="text" class="form-control" id="surName" name="personalData" autocomplete="username"
+                                required>
                         </div>
                         <div class="col-sm-4 mb-2">
                             <label for="name">Имя</label>
-                            <input type="text" class="form-control" id="name" name="personalData" autocomplete="name" required>
+                            <input type="text" class="form-control" id="name" name="personalData" autocomplete="name"
+                                required>
                         </div>
                         <div class="col-sm-4 mb-2">
                             <label for="secName">Отчество</label>
-                            <input type="text" class="form-control" id="secName" name="personalData" autocomplete="family-name" required>
+                            <input type="text" class="form-control" id="secName" name="personalData" autocomplete="family-name"
+                                required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="text-center col-sm-2 mb-2">
-                            <div class="text-center btn-sm btn-success mb-2">Меняли фамилию?</div>
+                            <div class="text-center btn-sm mb-2">Меняли фамилию?</div>
                             <div class="btn-group btn-group-toggle " data-toggle="buttons">
-                                <label class="btn btn-outline-success border-0 active">
+                                <label class="btn btn-outline-success btn-custom border-0 active">
                                     <input type="radio" name="changeSurname" value="Да"> Да
                                 </label>
-                                <label class="btn btn-outline-success border-0">
+                                <label class="btn btn-outline-success btn-custom border-0">
                                     <input type="radio" name="changeSurname" value="Нет" checked>
                                     Нет
                                 </label>
                             </div>
                         </div>
                         <div class="text-center offset-sm-2 col-sm-2 mb-2">
-                            <div class="text-center btn-sm btn-success mb-2">Пол</div>
+                            <div class="text-center btn-sm mb-2">Пол</div>
                             <div class="btn-group btn-group-toggle 2" data-toggle="buttons">
-                                <label class="btn btn-outline-success border-0 active">
+                                <label class="btn btn-outline-success btn-custom border-0 active">
                                     <input type="radio" name="sex" value="Мужcкой" checked> Муж
                                 </label>
-                                <label class="btn btn-outline-success border-0">
+                                <label class="btn btn-outline-success btn-custom border-0">
                                     <input type="radio" name="sex" value="Женский"> Жен
                                 </label>
                             </div>
                         </div>
                         <div class="text-center offset-sm-2 col-sm-2 mb-2">
-                            <div class="text-center btn-sm btn-success mb-2">Семейный статус</div>
+                            <div class="text-center btn-sm mb-2">Семейный статус</div>
                             <div class="input-group">
                                 <select class="custom-select" name="maritalStatus">
                                     <option value="Женат/Замужем">Женат/Замужем</option>
@@ -86,14 +89,14 @@
                     </div>
                     <div class=" d-flex flex-wrap no-gutters justify-content-around mb-2">
                         <div class="input-group col-sm-5 mb-2">
-                            <input type="number" class="form-control" min='0' max="100" aria-label="number">
+                            <input type="number" class="form-control" min='0' max="100" aria-label="number" oninput="this.reportValidity()">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary paintPogress" type="button">Кнопка</button>
                             </div>
                         </div>
                         <div class="col-sm-6 h-2 mb-2 progress border">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%" 
-                                aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                 </form>
@@ -102,7 +105,7 @@
         <div class="row mt-2">
             <div class="offset-sm-3 col-sm-9 col-12 center">
                 <button type="submit" form="card" class="handMade">
-                    Запустить модальное окно
+                    Смотреть резюме
                 </button>
 
                 <!-- Modal -->
@@ -116,7 +119,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                ...
+                            
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
